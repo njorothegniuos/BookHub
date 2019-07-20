@@ -40,7 +40,7 @@ public class BookService {
 		
 		//update operation
 		public Book update(Book bk) {
-			Book k = bookRepository.findByBookCode1(bk.getBookCode());
+			Book k = bookRepository.getOne(bk.getBookCode());
 			k.setBookName(bk.getBookName());
 			k.setAuthor(bk.getAuthor());
 			k.setYear(bk.getYear());
@@ -51,12 +51,12 @@ public class BookService {
 			bookRepository.deleteAll();
 		}
 		public void delete(int bookCode) {
-			Book p = bookRepository.findByBookCode1(bookCode);
+			Book p = bookRepository.getOne(bookCode);
 			bookRepository.delete(p);
 		}
 		
 		public Book getBook(int bookCode) {
-				return bookRepository.findByBookCode1(bookCode);
+				return bookRepository.getOne(bookCode);
 
 		}
 		

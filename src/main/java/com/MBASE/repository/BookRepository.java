@@ -11,11 +11,11 @@ import com.MBASE.model.Book;
 
 
 @Repository
-public interface BookRepository extends JpaRepository<Book, Long> {
+public interface BookRepository extends JpaRepository<Book, Integer> {
 	
 List<Book> findByBookCode(int BookCode);
 
-public Book findByBookCode1(int BookCode);
+public Book findByYear(int Year);
 	
 Book findByBookName(String BookName);
 

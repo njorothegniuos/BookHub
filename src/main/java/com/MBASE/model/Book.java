@@ -22,54 +22,52 @@ public class Book {
     private Long Id;
 	
 	@GeneratedValue(strategy = GenerationType.AUTO)
-    private int BookCode;
+    private int bookCode;
 
     @NotBlank
     @Size(min=5, max = 50, message="BookName should have atleast 5 characters")
-    private String BookName;
+    private String bookName;
     
     @NotBlank
     @Size(min=10, max = 50, message="Author Name should have atleast 10 characters")
-    private String Author;
+    private String author;
     
-    @NotBlank
-    @Size(min=4, max = 4, message="Enter a valid Year")
-    private int Year;
+    private int year;
 
 	public int getBookCode() {
-		return BookCode;
+		return bookCode;
 	}
 
 	public void setBookCode(int bookCode) {
-		BookCode = bookCode;
+		this.bookCode = bookCode;
 	}
 
 	public String getBookName() {
-		return BookName;
+		return bookName;
 	}
 
 	public void setBookName(String bookName) {
-		BookName = bookName;
+		this.bookName = bookName;
 	}
 
 	public String getAuthor() {
-		return Author;
+		return author;
 	}
 
 	public void setAuthor(String author) {
-		Author = author;
+		this.author = author;
 	}
 
 	public int getYear() {
-		return Year;
+		return year;
 	}
 
 	public void setYear(int year) {
-		Year = year;
+		this.year = year;
 	}
     
 	public String tosString() {
-		return "A book by the name: " +BookName + " written by : " + Author +" published in: " +Year;
+		return "A book by the name: " +bookName + " written by : " + author +" published in: " +year;
 	}
 
 }
