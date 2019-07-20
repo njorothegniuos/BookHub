@@ -68,5 +68,8 @@ public class Book {
 		Year = year;
 	}
     
+	public String tosString() {
+		return "A book by the name: " +BookName + " written by : " + Author +" published in: " +Year;
+	}
 
 }
