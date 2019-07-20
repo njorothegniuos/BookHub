@@ -14,6 +14,8 @@ import com.MBASE.model.Book;
 public interface BookRepository extends JpaRepository<Book, Long> {
 	
 List<Book> findByBookCode(int BookCode);
+
+public Book findByBookCode1(int BookCode);
 	
 Book findByBookName(String BookName);
 
