@@ -11,8 +11,8 @@
 	<groupId>com.FlashCash</groupId>
 	<artifactId>FlashCash</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>FlashCash</name>
-	<description>FlashCash REST API</description>
+	<name>BookHub</name>
+	<description>BookHub REST API</description>
 
 	<properties>
 		<java.version>1.8</java.version>
