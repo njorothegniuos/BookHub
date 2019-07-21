@@ -8,8 +8,8 @@
 		<version>2.1.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.FlashCash</groupId>
-	<artifactId>FlashCash</artifactId>
+	<groupId>com.BookHub</groupId>
+	<artifactId>BookHub</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>BookHub</name>
 	<description>BookHub REST API</description>
@@ -30,6 +30,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>1.5.10.RELEASE</version>
 		</dependency>
 
 		<dependency>
@@ -80,10 +85,9 @@
 		      <groupId>com.spotify</groupId>
 		      <artifactId>docker-maven-plugin</artifactId>
 		      <configuration>
-		        <imageName>learningspringboot</imageName>
+		        <imageName>bookhub</imageName>
 		        <baseImage>java:8</baseImage>
-		        <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
-		        <!-- copy the service's jar file from target into the root directory of the image --> 
+		        <entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint> 
 		        <resources>
 		           <resource>
 		             <targetPath>/</targetPath>
@@ -91,7 +95,7 @@
 		             <include>${project.build.finalName}.jar</include>
 		           </resource>
 		        </resources>
-		        <finalName>Learn-spring</finalName>
+		        <finalName>book_hub</finalName>
 		      </configuration>
 		    </plugin>
 			<plugin>
